@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
+    <title>Simple Editor by Norbert Łukaszuk</title>
     <meta name="description" content="Description" />
 
     <!-- Title -->
@@ -21,20 +21,27 @@
     <link
       rel="apple-touch-icon"
       sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
+      href="assets/img/text-box.png"
     />
 
     <link
       rel="icon"
       type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
+      href="assets/img/text-box.png"
     />
 
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <h1>Hello world - with simple PWA support!</h1>
-
+    
+    <h1>Simple Editor</h1>
+    <div id="textArea" >
+    <label class="label" for="textArea">Please enter Your text here ...</label>
+    <textarea name="textArea" id="textArea" cols="50" rows="20" placeholder="Please enter Your text here..." ></textarea>
+    <div class="buttons"><button class="buttons__load">load</button> <button class="buttons__save">save</button></div>
+    </div>
+    
+    
     <script src="js/main.js"></script>
   </body>
 </html>
