@@ -25,4 +25,8 @@ if (localStorage.getItem('input')){
 inputLS.addEventListener('keyup',(e) => {console.log(e.target.value)});
 inputLS.addEventListener('keyup',(e) => {localStorage.setItem('inputTextArea',e.target.value)});
 
+const loadButton = document.querySelector('.buttons__load--js');
+console.log(loadButton);
+loadButton.addEventListener('click', (e)=>{inputLS.innerHTML=(localStorage.getItem('inputTextArea'))});
+
 
