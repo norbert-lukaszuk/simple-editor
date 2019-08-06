@@ -17,6 +17,12 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 
-console.log(`Hello world!`);
+const inputLS = document.querySelector('.textArea');
+if (localStorage.getItem('input')){
+  inputLS.value = localStorage.getItem('input')
+}
+
+inputLS.addEventListener('keyup',(e) => {console.log(e.target.value)});
+inputLS.addEventListener('keyup',(e) => {localStorage.setItem('inputTextArea',e.target.value)});
 
 
