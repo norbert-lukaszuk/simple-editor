@@ -309,7 +309,7 @@ template {
 
 h1 {
   text-align: center;
-  color: #F9C802; }
+  color: white; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -321,27 +321,46 @@ html {
           box-sizing: inherit; }
 
 body {
-  color: #F9C802;
-  background: #530248; }
+  color: white;
+  background-color: black; }
 
 .buttons {
-  margin-top: 20px; }
+  margin-top: 20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
   .buttons button {
-    margin-right: 10px;
     width: 80px;
     height: 50px;
     border-radius: 10px;
     color: white;
     border: none; }
   .buttons__load {
-    background-color: blue; }
+    background-color: blue;
+    margin-right: 10px; }
   .buttons__save {
     background-color: green; }
 
-.label {
-  margin-bottom: 20px; }
+.flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 423px; }
 
-#textArea {
+.label {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 15px;
+  font-weight: 900;
+  font-size: 20px; }
+
+#mainArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,5 +371,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+
+#textArea {
+  background-color: black;
+  border: solid white 2px;
+  color: white;
+  border-radius: 10px; }
 
 /*# sourceMappingURL=main.css.map */
