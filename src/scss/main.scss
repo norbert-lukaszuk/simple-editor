@@ -22,6 +22,8 @@ body {
 .buttons{
   margin-top: 20px;
   align-self: flex-end;
+  position: relative;
+  left: 10px;
   & button{
     width: 80px;
     height: 50px;
@@ -37,9 +39,11 @@ body {
   }
   &__save{
     background-color: green;
-    
   }
-  
+  &__clear{
+    background-color: red;
+    margin-right: 10px;
+  }
 }
 .flexBox{
   display: flex;
