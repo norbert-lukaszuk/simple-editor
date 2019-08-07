@@ -18,15 +18,19 @@ if ('serviceWorker' in navigator) {
 
 
 const inputLS = document.querySelector('.textArea');
-if (localStorage.getItem('input')){
-  inputLS.value = localStorage.getItem('input')
-}
+// if (localStorage.getItem('input')){
+//   inputLS.value = localStorage.getItem('input');
+// }
 
-inputLS.addEventListener('keyup',(e) => {console.log(e.target.value)});
-inputLS.addEventListener('keyup',(e) => {localStorage.setItem('inputTextArea',e.target.value)});
+// inputLS.addEventListener('keyup',(e) => {console.log(e.target.value)});
+// inputLS.addEventListener('keyup',(e) => {localStorage.setItem('inputTextArea',e.target.value)});
 
 const loadButton = document.querySelector('.buttons__load--js');
-console.log(loadButton);
+const saveButton = document.querySelector('.buttons__save--js');
+// console.log(loadButton);
+
 loadButton.addEventListener('click', (e)=>{inputLS.innerHTML=(localStorage.getItem('inputTextArea'))});
+saveButton.addEventListener('click',(e)=>{localStorage.setItem('inputTextArea',inputLS.value)})
+
 
 
