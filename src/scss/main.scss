@@ -20,10 +20,14 @@ body {
   background-color: black;
 }
 .buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
   margin-top: 20px;
   align-self: flex-end;
   position: relative;
-  left: 10px;
+  // left: 10px;
   & button{
     width: 80px;
     height: 50px;
@@ -44,7 +48,11 @@ body {
     background-color: red;
     margin-right: 10px;
   }
+  &__clearInput{
+    background-color: orangered;
+  }
 }
+
 .flexBox{
   display: flex;
   flex-direction: column;
