@@ -38,7 +38,8 @@ loadButton.addEventListener('click', (e)=>{inputLS.innerHTML=(localStorage.getIt
 saveButton.addEventListener('click',(e)=>{localStorage.setItem('inputTextArea',inputLS.value)});
 // Nasłuchuje kliknięcia w clear button po czym czyści zawartość localStorage metodą '.clear()'
 clearButton.addEventListener('click',(e)=>{localStorage.clear()});
-
+//Nasłuchuje kliknięcia w reset button po czym czyści imput czyli textarea
+resetButton.addEventListener('click', (e)=>{inputLS.innerHTML=""});
 
 
 
