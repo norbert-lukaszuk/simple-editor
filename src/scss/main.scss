@@ -1,6 +1,6 @@
 @import "_normalize";
 @import "_variables";
-
+$scale:1.2;
 h1{
   text-align: center;
   color: white;
@@ -34,22 +34,35 @@ body {
     border-radius: 10px;
     color: white;
     border: none;
+    transition: transform .5s;
     
     
   }
   &__load{
     background-color: blue;
     margin-right: 10px;
+    &:hover{
+      transform: scale($scale); color: chartreuse;
+    }
   }
   &__save{
     background-color: green;
+    &:hover{
+      transform: scale($scale); color: chartreuse;
+    }
   }
   &__clear{
     background-color: red;
     margin-right: 10px;
+    &:hover{
+      transform: scale($scale); color: chartreuse;
+    }
   }
   &__clearInput{
     background-color: orangered;
+    &:hover{
+      transform: scale($scale); color: chartreuse;
+    }
   }
 }
 
