@@ -39,6 +39,8 @@ saveButton.addEventListener('click',(e)=>{localStorage.setItem('inputTextArea',i
 // Nasłuchuje kliknięcia w clear button po czym czyści zawartość localStorage metodą '.clear()'
 clearButton.addEventListener('click',(e)=>{localStorage.clear()});
 
+ function newFunction() {document.getElementById("textArea").reset();}
+
 
 
 
