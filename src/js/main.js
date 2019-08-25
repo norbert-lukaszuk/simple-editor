@@ -19,14 +19,7 @@ if ('serviceWorker' in navigator) {
 // Zapisuje w zmiennej input wpisywany w textarea
 const inputLS = document.querySelector('.textArea');
 
-// if (localStorage.getItem('input')){
-//   inputLS.value = localStorage.getItem('input');
-// }
 
-// inputLS.addEventListener('keyup',(e) => {console.log(e.target.value)});
-// inputLS.addEventListener('keyup',(e) => {localStorage.setItem('inputTextArea',e.target.value)});
-
-// Przypisuje do zmiennych buttony na podstawie ich klas z modyfikarem '--js'
 const loadButton = document.querySelector('.buttons__load--js');
 const saveButton = document.querySelector('.buttons__save--js');
 const clearButton = document.querySelector('.buttons__clear--js');
