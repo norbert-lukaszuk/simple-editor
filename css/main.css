@@ -325,25 +325,62 @@ body {
   background-color: black; }
 
 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
   margin-top: 20px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  position: relative;
-  left: 10px; }
+  position: relative; }
   .buttons button {
     width: 80px;
     height: 50px;
     border-radius: 10px;
     color: white;
-    border: none; }
+    border: none;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -o-transition: transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s; }
   .buttons__load {
     background-color: blue;
     margin-right: 10px; }
+    .buttons__load:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      color: chartreuse; }
   .buttons__save {
     background-color: green; }
+    .buttons__save:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      color: chartreuse; }
   .buttons__clear {
     background-color: red;
     margin-right: 10px; }
+    .buttons__clear:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      color: chartreuse; }
+  .buttons__clearInput {
+    background-color: orangered; }
+    .buttons__clearInput:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      color: chartreuse; }
 
 .flexBox {
   display: -webkit-box;
