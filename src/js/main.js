@@ -18,7 +18,7 @@ if ('serviceWorker' in navigator) {
 
 // Zapisuje w zmiennej input wpisywany w textarea
 const inputLS = document.querySelector('.textArea');
-
+// let array = ();
 
 
 const loadButton = document.querySelector('.buttons__load--js');
@@ -31,7 +31,9 @@ resetButton.addEventListener('click', (e)=>{inputLS.value=""}, false);
 // Nasłuchuje klikniecia load button i wypisuje przez '.innerHTML' pobrane z localStorage dane jeśli są zapiane
 loadButton.addEventListener('click', (e)=>{inputLS.value =(localStorage.getItem('inputTextArea'))});
 
-saveButton.addEventListener('click',(e)=>{localStorage.setItem('inputTextArea',inputLS.value)});
+saveButton.addEventListener('click',(e)=>{localStorage.setItem('inputTextArea',inputLS.value);
+    // array.push(JSON.stringify('inputTextArea'));
+});
 // Nasłuchuje kliknięcia w clear button po czym czyści zawartość localStorage metodą '.clear()'
 clearButton.addEventListener('click',(e)=>{localStorage.clear()});
 
