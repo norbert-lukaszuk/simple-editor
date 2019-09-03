@@ -24,7 +24,9 @@ const resetButton = document.querySelector('.buttons__clearInput--js')
 resetButton.addEventListener('click', (e)=>{inputLS.value=""}, false);
 // Nasłuchuje klikniecia load button i wypisuje przez '.innerHTML' pobrane z localStorage dane jeśli są zapiane
 loadButton.addEventListener('click', (e)=>{
- 
+  for(i=0;i<=localStorage.getItem('counter');i++){
+    myArray[i]=localStorage.getItem(`inputTextArea ${i}`);
+  }
   localStorage.setItem('savedText',myArray);
   inputLS.value =(localStorage.getItem('savedText'));
   // console.log(counter);
