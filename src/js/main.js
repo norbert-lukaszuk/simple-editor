@@ -21,12 +21,16 @@ const clearButton = document.querySelector('.buttons__clear--js');
 const resetButton = document.querySelector('.buttons__clearInput--js')
 
 //Nasłuchuje kliknięcia w reset button po czym czyści imput czyli textarea
-resetButton.addEventListener('click', (e)=>{inputLS.value=""}, false);
+resetButton.addEventListener('click', (e)=>{inputLS.value="";
+      
+}, false);
 // Nasłuchuje klikniecia load button i wypisuje przez '.innerHTML' pobrane z localStorage dane jeśli są zapiane
 loadButton.addEventListener('click', (e)=>{
   for(i=0;i<=localStorage.getItem('counter');i++){
     myArray[i]=localStorage.getItem(`inputTextArea ${i}`);
   }
+  
+
   localStorage.setItem('savedText',myArray);
   inputLS.value =(localStorage.getItem('savedText'));
   // console.log(counter);
@@ -51,7 +55,10 @@ saveButton.addEventListener('click',(e)=>{localStorage.setItem(`inputTextArea ${
 
 });
 // Nasłuchuje kliknięcia w clear button po czym czyści zawartość localStorage metodą '.clear()'
-clearButton.addEventListener('click',(e)=>{localStorage.clear()});
+clearButton.addEventListener('click',(e)=>{localStorage.clear();
+        localStorage.setItem('counter', 0);
+        myArray=[];
+});
 
 
 

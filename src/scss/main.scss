@@ -40,13 +40,14 @@ body {
   }
   &__load{
     background-color: blue;
-    margin-right: 10px;
+    
     &:hover{
       transform: scale($scale); color: chartreuse;
     }
   }
   &__save{
     background-color: green;
+    margin-right: 10px;
     &:hover{
       transform: scale($scale); color: chartreuse;
     }
