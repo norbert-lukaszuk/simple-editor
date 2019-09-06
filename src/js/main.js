@@ -51,7 +51,9 @@ saveButton.addEventListener('click',(e)=>{localStorage.setItem(`inputTextArea ${
 clearButton.addEventListener('click',(e)=>{localStorage.clear();
         localStorage.setItem('counter', 0);
         myArray=[];
+        counter=0;
 });
+        
 
 
 
