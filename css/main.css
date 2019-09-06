@@ -309,7 +309,8 @@ template {
 
 h1 {
   text-align: center;
-  color: white; }
+  color: white;
+  padding-top: 30px; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -352,15 +353,15 @@ body {
     transition: transform .5s;
     transition: transform .5s, -webkit-transform .5s; }
   .buttons__load {
-    background-color: blue;
-    margin-right: 10px; }
+    background-color: blue; }
     .buttons__load:hover {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
               transform: scale(1.2);
       color: chartreuse; }
   .buttons__save {
-    background-color: green; }
+    background-color: green;
+    margin-right: 10px; }
     .buttons__save:hover {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
