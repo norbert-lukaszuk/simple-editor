@@ -66,6 +66,12 @@ body {
       transform: scale($scale); color: chartreuse;
     }
   }
+  &__paste{
+    background-color: gray;
+    &:hover{
+      transform: scale($scale); color: chartreuse;
+    }
+  }
 }
 
 .flexBox{

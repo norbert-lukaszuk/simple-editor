@@ -21,7 +21,8 @@ myArray=new Array();
 const loadButton = document.querySelector('.buttons__load--js');
 const saveButton = document.querySelector('.buttons__save--js');
 const clearButton = document.querySelector('.buttons__clear--js');
-const resetButton = document.querySelector('.buttons__clearInput--js')
+const resetButton = document.querySelector('.buttons__clearInput--js');
+const pasteButton = document.querySelector('.buttons__paste--js');
 
 //Nasłuchuje kliknięcia w reset button po czym czyści imput czyli textarea
 resetButton.addEventListener('click', (e)=>{inputLS.value="";}, false);
@@ -44,6 +45,7 @@ saveButton.addEventListener('click',(e)=>{localStorage.setItem(`inputTextArea ${
     localStorage.setItem('counter',counter);
     let arrayElement = (localStorage.getItem(`inputTextArea ${saveCount}`));
     myArray.push(arrayElement);
+    inputLS.value = '';
     
 });
 
@@ -53,8 +55,14 @@ clearButton.addEventListener('click',(e)=>{localStorage.clear();
         myArray=[];
         counter=0;
 });
-        
+pasteButton.addEventListener('click', (e)=>{
+  // alert('paste');     
+// function selecting() {
+  if (document.getSelection){ 
+  let text=document.getSelection();
+  let textString=text.toString();
+  console.log(textString);
 
-
-
-
+  };
+// };
+});
