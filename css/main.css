@@ -382,6 +382,13 @@ body {
           -ms-transform: scale(1.2);
               transform: scale(1.2);
       color: chartreuse; }
+  .buttons__paste {
+    background-color: gray; }
+    .buttons__paste:hover {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2);
+      color: chartreuse; }
 
 .flexBox {
   display: -webkit-box;
