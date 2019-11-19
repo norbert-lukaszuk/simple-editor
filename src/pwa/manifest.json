@@ -3,7 +3,7 @@
   "short_name": "Simple editor",
   "theme_color": "#3b556a",
   "background_color": "#3e92d5",
-  "display": "fullscreen",
+  "display": "standalone",
   "Scope": "/simple-editor/",
   "start_url": "/simple-editor/",
   "icons": [
