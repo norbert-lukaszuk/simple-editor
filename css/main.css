@@ -429,4 +429,23 @@ body {
   border-radius: 10px;
   padding: 10px 10px; }
 
+@media (max-width: 360px) {
+  #textArea {
+    max-width: 320px; }
+  .buttons {
+    max-width: 360px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 5px;
+    margin-bottom: 10px; }
+    .buttons__save {
+      margin-right: 0; }
+    .buttons__clear {
+      margin-right: 0; }
+  .label {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center; } }
+
 /*# sourceMappingURL=main.css.map */
