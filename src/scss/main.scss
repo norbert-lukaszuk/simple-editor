@@ -102,3 +102,26 @@ body {
   //   padding: 10px;
   //   }
 }
+@media(max-width:360px){
+  #textArea{
+    max-width: 320px;
+  }
+  .buttons{
+    max-width: 360px;
+    align-self: center;
+    padding: 0 5px;
+    margin-bottom: 10px;
+
+    &__save{
+      margin-right: 0;
+    }
+
+    &__clear{
+      margin-right: 0;
+    }
+  }
+  .label{
+    align-self: center;
+  }
+  
+}
