@@ -117,18 +117,31 @@ body {
     &__save{
       // margin-right: 0;
             &:hover{
-        transform: scale(1); color: white;
+        transform: none;
       }
     }
 
     &__clear{
       margin-right: 0;
+      &:hover{
+        transform: none;
+      }
     }
     &__load{
-      // margin-right: 10px;
+      &:hover{
+        transform: none;
+      }
     }
     &__clear{
       margin-right: 10px;
+      &:hover{
+        transform: none;
+      }
+    }
+    &__clearInput{
+      &:hover{
+        transform: none;
+      }
     }
   }
   .label{
