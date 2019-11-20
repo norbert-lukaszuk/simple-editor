@@ -31,6 +31,9 @@ loadButton.addEventListener('click', (e)=>{
   for(i=0;i<=localStorage.getItem('counter');i++){
     myArray[i]=localStorage.getItem(`inputTextArea ${i}`);
   }
+  for(i=0;i<=localStorage.length;i++){
+    inputLS.value=(localStorage.getItem(localStorage.key(i)));
+  }
   // pobiera z tablicy poszczególne elementy i tworzy string gdzie poszczególne elementy tablicy są wypisywane w nowych liniach
   myString=myArray.join('\n');
   localStorage.setItem('savedText',myString);
@@ -39,16 +42,17 @@ loadButton.addEventListener('click', (e)=>{
 });
 
 
-saveButton.addEventListener('click',(e)=>{localStorage.setItem(`inputTextArea ${localStorage.getItem('counter')}`,inputLS.value);
+saveButton.addEventListener('click',(e)=>{//localStorage.setItem(`inputTextArea ${localStorage.getItem('counter')}`,inputLS.value);
     const key = new Date().toISOString().slice(11, 19); 
-    let saveCount = localStorage.getItem('counter');
-    counter++;
-    localStorage.setItem('counter',counter);
-    let arrayElement = (localStorage.getItem(`inputTextArea ${saveCount}`));
-    myArray.push(arrayElement);
-    myArray.push(key);
-    inputLS.value = '';
-    console.log(myArray);
+    // let saveCount = localStorage.getItem('counter');
+    // counter++;
+    // localStorage.setItem('counter',counter);
+    localStorage.setItem(key,inputLS.value);
+    // let arrayElement = (localStorage.getItem(`inputTextArea ${saveCount}`));
+    // myArray.push(arrayElement);
+    // myArray.push(key);
+    // inputLS.value = '';
+    // console.log(myArray);
     
 });
 
