@@ -353,15 +353,15 @@ body {
     transition: transform .5s;
     transition: transform .5s, -webkit-transform .5s; }
   .buttons__load {
-    background-color: blue; }
+    background-color: blue;
+    margin-right: 10px; }
     .buttons__load:hover {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
               transform: scale(1.2);
       color: chartreuse; }
   .buttons__save {
-    background-color: green;
-    margin-right: 10px; }
+    background-color: green; }
     .buttons__save:hover {
       -webkit-transform: scale(1.2);
           -ms-transform: scale(1.2);
@@ -438,11 +438,34 @@ body {
         -ms-grid-row-align: center;
         align-self: center;
     padding: 0 5px;
-    margin-bottom: 10px; }
-    .buttons__save {
-      margin-right: 0; }
+    margin-bottom: 10px;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none; }
+    .buttons__save:hover {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
     .buttons__clear {
       margin-right: 0; }
+      .buttons__clear:hover {
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none; }
+    .buttons__load:hover {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
+    .buttons__clear {
+      margin-right: 10px; }
+      .buttons__clear:hover {
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none; }
+    .buttons__clearInput:hover {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
   .label {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
