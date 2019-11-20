@@ -41,6 +41,7 @@ body {
   }
   &__load{
     background-color: blue;
+    margin-right: 10px;
     
     &:hover{
       transform: scale($scale); color: chartreuse;
@@ -48,7 +49,7 @@ body {
   }
   &__save{
     background-color: green;
-    margin-right: 10px;
+    // margin-right: 10px;
     &:hover{
       transform: scale($scale); color: chartreuse;
     }
@@ -114,14 +115,20 @@ body {
     transition: none;
 
     &__save{
-      margin-right: 0;
-      &:hover{
+      // margin-right: 0;
+            &:hover{
         transform: scale(1); color: white;
       }
     }
 
     &__clear{
       margin-right: 0;
+    }
+    &__load{
+      // margin-right: 10px;
+    }
+    &__clear{
+      margin-right: 10px;
     }
   }
   .label{

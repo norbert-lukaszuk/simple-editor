@@ -40,12 +40,15 @@ loadButton.addEventListener('click', (e)=>{
 
 
 saveButton.addEventListener('click',(e)=>{localStorage.setItem(`inputTextArea ${localStorage.getItem('counter')}`,inputLS.value);
+    const key = new Date().toISOString().slice(11, 19); 
     let saveCount = localStorage.getItem('counter');
     counter++;
     localStorage.setItem('counter',counter);
     let arrayElement = (localStorage.getItem(`inputTextArea ${saveCount}`));
     myArray.push(arrayElement);
+    myArray.push(key);
     inputLS.value = '';
+    console.log(myArray);
     
 });
 
@@ -55,14 +58,14 @@ clearButton.addEventListener('click',(e)=>{localStorage.clear();
         myArray=[];
         counter=0;
 });
-pasteButton.addEventListener('click', (e)=>{
-  // alert('paste');     
-// function selecting() {
-  if (document.getSelection){ 
-  let text=document.getSelection();
-  let textString=text.toString();
-  console.log(textString);
+// pasteButton.addEventListener('click', (e)=>{
+//   // alert('paste');     
+// // function selecting() {
+//   if (document.getSelection){ 
+//   let text=document.getSelection();
+//   let textString=text.toString();
+//   console.log(textString);
 
-  };
-// };
-});
+//   };
+// // };
+// });
