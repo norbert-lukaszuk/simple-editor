@@ -10,7 +10,7 @@ const inputLS = document.querySelector('.textArea');
 
 // tworzy pustą tablicę do której zapiszemy wszystkie wprowadzone elemennty 
 myArray=new Array();
-
+myString = '';
 
 const loadButton = document.querySelector('.buttons__load--js');
 const saveButton = document.querySelector('.buttons__save--js');
@@ -28,7 +28,7 @@ loadButton.addEventListener('click', (e)=>{
   // pobiera z tablicy poszczególne elementy i tworzy string gdzie poszczególne elementy tablicy są wypisywane w nowych liniach
    myString=myArray.join('\n');
   
-  inputLS.value=(myString);
+  inputLS.value = myString;
 
 });
 
