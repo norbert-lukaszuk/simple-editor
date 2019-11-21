@@ -5,15 +5,9 @@
 // Zapisuje w zmiennej input wpisywany w textarea
 const inputLS = document.querySelector('.textArea');
 // Sprawdza czy licznik counter w localStorage ma jakąś wartość jeśli tak pozostawia ją jeśli nieokreśloną przypisuje 0
-if (localStorage.getItem('counter')== null)
-{
-  localStorage.setItem('counter', 0);
-}
-else{
 
-};
 // przypisuje do zmiennej couter wartość pobraną z loacalStorage
-let counter = localStorage.getItem('counter');
+
 // tworzy pustą tablicę do której zapiszemy wszystkie wprowadzone elemennty 
 myArray=new Array();
 
@@ -28,44 +22,26 @@ const pasteButton = document.querySelector('.buttons__paste--js');
 resetButton.addEventListener('click', (e)=>{inputLS.value="";}, false);
 // Nasłuchuje klikniecia load button i wypisuje przez '.innerHTML' pobrane z localStorage dane jeśli są zapiane
 loadButton.addEventListener('click', (e)=>{
-  for(i=0;i<=localStorage.getItem('counter');i++){
-    myArray[i]=localStorage.getItem(`inputTextArea ${i}`);
+  for(i=0;i<=localStorage.length;i++){
+    myArray[i]=localStorage.getItem(localStorage.key(i));
   }
   // pobiera z tablicy poszczególne elementy i tworzy string gdzie poszczególne elementy tablicy są wypisywane w nowych liniach
-  myString=myArray.join('\n');
-  localStorage.setItem('savedText',myString);
-  inputLS.value =(localStorage.getItem('savedText'));
+   myString=myArray.join('\n');
   
+  inputLS.value=(myString);
+
 });
 
 
-saveButton.addEventListener('click',(e)=>{localStorage.setItem(`inputTextArea ${localStorage.getItem('counter')}`,inputLS.value);
+saveButton.addEventListener('click',(e)=>{//localStorage.setItem(`inputTextArea ${localStorage.getItem('counter')}`,inputLS.value);
     const key = new Date().toISOString().slice(11, 19); 
-    let saveCount = localStorage.getItem('counter');
-    counter++;
-    localStorage.setItem('counter',counter);
-    let arrayElement = (localStorage.getItem(`inputTextArea ${saveCount}`));
-    myArray.push(arrayElement);
-    myArray.push(key);
+    localStorage.setItem(key,inputLS.value);
     inputLS.value = '';
-    console.log(myArray);
+    myArray=[];
     
 });
 
 // Nasłuchuje kliknięcia w clear button po czym czyści zawartość localStorage metodą '.clear()'
 clearButton.addEventListener('click',(e)=>{localStorage.clear();
-        localStorage.setItem('counter', 0);
         myArray=[];
-        counter=0;
 });
-// pasteButton.addEventListener('click', (e)=>{
-//   // alert('paste');     
-// // function selecting() {
-//   if (document.getSelection){ 
-//   let text=document.getSelection();
-//   let textString=text.toString();
-//   console.log(textString);
-
-//   };
-// // };
-// });
