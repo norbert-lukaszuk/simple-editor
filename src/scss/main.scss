@@ -121,7 +121,11 @@ body {
                 
       
     }
-
+    &__clearInput{
+      &:hover{
+      transform: none;
+      }
+    }
     &__clear{
       margin-right: 0;
       &:hover{
