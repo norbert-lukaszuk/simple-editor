@@ -443,29 +443,14 @@ body {
     -o-transition: none;
     transition: none; }
     .buttons__save:hover {
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none; }
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
+      color: white; }
     .buttons__clear {
       margin-right: 0; }
-      .buttons__clear:hover {
-        -webkit-transform: none;
-            -ms-transform: none;
-                transform: none; }
-    .buttons__load:hover {
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none; }
     .buttons__clear {
       margin-right: 10px; }
-      .buttons__clear:hover {
-        -webkit-transform: none;
-            -ms-transform: none;
-                transform: none; }
-    .buttons__clearInput:hover {
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none; }
   .label {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
