@@ -446,6 +446,10 @@ body {
       -webkit-transform: none;
           -ms-transform: none;
               transform: none; }
+    .buttons__clearInput:hover {
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
     .buttons__clear {
       margin-right: 0; }
       .buttons__clear:hover {
